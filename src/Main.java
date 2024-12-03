@@ -6,34 +6,34 @@ public class Main {
         // Задача 1
         System.out.println("Задача 1");
 
-        proverkaVisokosnosti(2024);
-        proverkaVisokosnosti(2025);
-        proverkaVisokosnosti(100);
+        proveritVisokosnost(2024);
+        proveritVisokosnost(2025);
+        proveritVisokosnost(100);
 
         // Задача 2
         System.out.println();
         System.out.println("Задача 2");
 
-        proverkaOS(1, 2024);
-        proverkaOS(1, 2023);
-        proverkaOS(0, 2024);
-        proverkaOS(0, 2023);
+        proveritOS(1, 2024);
+        proveritOS(1, 2023);
+        proveritOS(0, 2024);
+        proveritOS(0, 2023);
 
         // Задача 3
         System.out.println();
         System.out.println("Задача 3");
 
-        System.out.println("Потребуется дней: " + proverkaDostavki(19));
-        System.out.println("Потребуется дней: " + proverkaDostavki(20));
-        System.out.println("Потребуется дней: " + proverkaDostavki(25));
-        System.out.println("Потребуется дней: " + proverkaDostavki(60));
-        System.out.println("Потребуется дней: " + proverkaDostavki(64));
-        System.out.println("Потребуется дней: " + proverkaDostavki(100));
-        System.out.println("Потребуется дней: " + proverkaDostavki(110));
-        System.out.println("Потребуется дней: " + proverkaDostavki(115));
+        System.out.println("Потребуется дней: " + proveritDostavky(19));
+        System.out.println("Потребуется дней: " + proveritDostavky(20));
+        System.out.println("Потребуется дней: " + proveritDostavky(25));
+        System.out.println("Потребуется дней: " + proveritDostavky(60));
+        System.out.println("Потребуется дней: " + proveritDostavky(64));
+        System.out.println("Потребуется дней: " + proveritDostavky(100));
+        System.out.println("Потребуется дней: " + proveritDostavky(110));
+        System.out.println("Потребуется дней: " + proveritDostavky(115));
     }
 
-    public static void proverkaVisokosnosti(int year) {
+    public static void proveritVisokosnost(int year) {
         if (year <= 1584) {
             System.out.println("В " + year + " году понятия 'високосный год' еще не существовало");
         } else if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
@@ -43,7 +43,7 @@ public class Main {
         }
     }
 
-    public static void proverkaOS(int clientOS, int clientDeviceYear) {
+    public static void proveritOS(int clientOS, int clientDeviceYear) {
         String mobileOSName = switch (clientOS) {
             case 0 -> "iOS";
             case 1 -> "Android";
@@ -59,7 +59,7 @@ public class Main {
         }
     }
 
-    public static int proverkaDostavki(int deliveryDistance) {
+    public static int proveritDostavky(int deliveryDistance) {
         int deliveryDays;
 
         if (deliveryDistance <= 20) {
